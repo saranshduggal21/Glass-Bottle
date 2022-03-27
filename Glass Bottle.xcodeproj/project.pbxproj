@@ -11,7 +11,6 @@
 		076AE9CE27CBEA57005E55EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AE9CD27CBEA57005E55EF /* SceneDelegate.swift */; };
 		076AE9D027CBEA57005E55EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AE9CF27CBEA57005E55EF /* ViewController.swift */; };
 		076AE9D327CBEA57005E55EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076AE9D127CBEA57005E55EF /* Main.storyboard */; };
-		076AE9D627CBEA57005E55EF /* Glass_Bottle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 076AE9D427CBEA57005E55EF /* Glass_Bottle.xcdatamodeld */; };
 		076AE9D827CBEA57005E55EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076AE9D727CBEA57005E55EF /* Assets.xcassets */; };
 		076AE9DB27CBEA57005E55EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076AE9D927CBEA57005E55EF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		076AE9CD27CBEA57005E55EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		076AE9CF27CBEA57005E55EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		076AE9D227CBEA57005E55EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		076AE9D527CBEA57005E55EF /* Glass_Bottle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Glass_Bottle.xcdatamodel; sourceTree = "<group>"; };
 		076AE9D727CBEA57005E55EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		076AE9DA27CBEA57005E55EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		076AE9DC27CBEA57005E55EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				076AE9D727CBEA57005E55EF /* Assets.xcassets */,
 				076AE9D927CBEA57005E55EF /* LaunchScreen.storyboard */,
 				076AE9DC27CBEA57005E55EF /* Info.plist */,
-				076AE9D427CBEA57005E55EF /* Glass_Bottle.xcdatamodeld */,
 			);
 			path = "Glass Bottle";
 			sourceTree = "<group>";
@@ -141,7 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				076AE9D627CBEA57005E55EF /* Glass_Bottle.xcdatamodeld in Sources */,
 				076AE9D027CBEA57005E55EF /* ViewController.swift in Sources */,
 				076AE9CC27CBEA57005E55EF /* AppDelegate.swift in Sources */,
 				076AE9CE27CBEA57005E55EF /* SceneDelegate.swift in Sources */,
@@ -364,19 +360,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		076AE9D427CBEA57005E55EF /* Glass_Bottle.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				076AE9D527CBEA57005E55EF /* Glass_Bottle.xcdatamodel */,
-			);
-			currentVersion = 076AE9D527CBEA57005E55EF /* Glass_Bottle.xcdatamodel */;
-			path = Glass_Bottle.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 076AE9C027CBEA57005E55EF /* Project object */;
 }
