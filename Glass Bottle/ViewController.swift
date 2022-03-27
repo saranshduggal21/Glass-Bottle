@@ -78,7 +78,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-//MARK: - Processing Text and Getting Results
+//MARK: - Processing Barcode and Getting Results
     
     func textDetection(selectedImage image: CIImage) {
         do {
@@ -87,14 +87,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let imageHandler = VNImageRequestHandler(ciImage: image)
             
             //Image Request -> Requesting Vision to classify text
-            let request = VNRecognizeTextRequest { vnrequest, error in //Performing a Text Recognition request using Vision.
-                let mlResults = vnrequest.results as? [VNRecognizedTextObservation] //Processing image and getting the results in the form of [VNRecognizedTextObservation]
+            let request = VNDetectBarcodesRequest { vnrequest, error in //Performing a Barcode Recognition request using Vision.
+                let mlResults = vnrequest.results as? [VNBarcodeObservation] //Processing image and getting the results in the form of [VNBarcodeObservation]
                 
-                if let classifiedText = mlResults?.compactMap({$0.topCandidates(1).first?.string}).joined(separator: " ") {
-                    //"classifiedText" refers to the top string candidate for recognized text, seperated by a space.
+                if let classifiedBarcode = mlResults?.first?.payloadStringValue {
+                    //"classifiedBarcode" refers to the string value that represents the barcode payload (barcode number, QR code decrypter, driver license info, etc.).
                     
                     DispatchQueue.main.async {
-                        self.navigationItem.title = classifiedText
+                        self.navigationItem.title = classifiedBarcode
                     }
                 }
             }
