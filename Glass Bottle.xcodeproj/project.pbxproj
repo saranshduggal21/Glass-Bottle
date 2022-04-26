@@ -13,6 +13,11 @@
 		076AE9D327CBEA57005E55EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076AE9D127CBEA57005E55EF /* Main.storyboard */; };
 		076AE9D827CBEA57005E55EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076AE9D727CBEA57005E55EF /* Assets.xcassets */; };
 		076AE9DB27CBEA57005E55EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076AE9D927CBEA57005E55EF /* LaunchScreen.storyboard */; };
+		07CF671D28176EDA00617A41 /* BarcodeAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF671C28176EDA00617A41 /* BarcodeAPIManager.swift */; };
+		07CF671F2817722900617A41 /* BarcodeAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF671E2817722900617A41 /* BarcodeAPIData.swift */; };
+		07CF6723281785EC00617A41 /* IngredientsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF6722281785EC00617A41 /* IngredientsAPIManager.swift */; };
+		07CF67252817874100617A41 /* IngredientsAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF67242817874100617A41 /* IngredientsAPIData.swift */; };
+		07CF6727281848EA00617A41 /* BarcodeAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF6726281848EA00617A41 /* BarcodeAPIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		076AE9D727CBEA57005E55EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		076AE9DA27CBEA57005E55EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		076AE9DC27CBEA57005E55EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07CF671C28176EDA00617A41 /* BarcodeAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeAPIManager.swift; sourceTree = "<group>"; };
+		07CF671E2817722900617A41 /* BarcodeAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeAPIData.swift; sourceTree = "<group>"; };
+		07CF6722281785EC00617A41 /* IngredientsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAPIManager.swift; sourceTree = "<group>"; };
+		07CF67242817874100617A41 /* IngredientsAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAPIData.swift; sourceTree = "<group>"; };
+		07CF6726281848EA00617A41 /* BarcodeAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeAPIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +69,33 @@
 				076AE9CB27CBEA57005E55EF /* AppDelegate.swift */,
 				076AE9CD27CBEA57005E55EF /* SceneDelegate.swift */,
 				076AE9CF27CBEA57005E55EF /* ViewController.swift */,
+				07CF6721281785D200617A41 /* API Managers */,
+				07CF6720281785CB00617A41 /* Models */,
 				076AE9D127CBEA57005E55EF /* Main.storyboard */,
 				076AE9D727CBEA57005E55EF /* Assets.xcassets */,
 				076AE9D927CBEA57005E55EF /* LaunchScreen.storyboard */,
 				076AE9DC27CBEA57005E55EF /* Info.plist */,
 			);
 			path = "Glass Bottle";
+			sourceTree = "<group>";
+		};
+		07CF6720281785CB00617A41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07CF671E2817722900617A41 /* BarcodeAPIData.swift */,
+				07CF67242817874100617A41 /* IngredientsAPIData.swift */,
+				07CF6726281848EA00617A41 /* BarcodeAPIModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07CF6721281785D200617A41 /* API Managers */ = {
+			isa = PBXGroup;
+			children = (
+				07CF671C28176EDA00617A41 /* BarcodeAPIManager.swift */,
+				07CF6722281785EC00617A41 /* IngredientsAPIManager.swift */,
+			);
+			path = "API Managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				076AE9D027CBEA57005E55EF /* ViewController.swift in Sources */,
+				07CF6723281785EC00617A41 /* IngredientsAPIManager.swift in Sources */,
+				07CF671D28176EDA00617A41 /* BarcodeAPIManager.swift in Sources */,
+				07CF6727281848EA00617A41 /* BarcodeAPIModel.swift in Sources */,
+				07CF67252817874100617A41 /* IngredientsAPIData.swift in Sources */,
+				07CF671F2817722900617A41 /* BarcodeAPIData.swift in Sources */,
 				076AE9CC27CBEA57005E55EF /* AppDelegate.swift in Sources */,
 				076AE9CE27CBEA57005E55EF /* SceneDelegate.swift in Sources */,
 			);
