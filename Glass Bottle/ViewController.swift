@@ -7,6 +7,7 @@
 
 import UIKit
 import Vision
+import RealmSwift
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, BarcodeAPIDelegate, IngredientAPIDelegate {
     
@@ -17,7 +18,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var ingredientAPIManager = IngredientsAPIManager()
     var userProductName = " "
     var ingredientsAPIURL = " "
-
+    var ingredientList: [String] = []
+    var notificationToken: NotificationToken? //Important Class Variable for Realm
+    let realmQueue = DispatchQueue(label: "realm")
+    
+    
 //MARK: - BarcodeAPIDelegate Method
     func barcodeAPIData(parsedData data: BarcodeAPIModel) -> String {
         self.userProductName = data.productName
@@ -32,12 +37,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return ingredientsAPIURL
     }
     
+    
+//MARK: End Notification Observing if the View is Closed
+    override func viewWillDisappear(_ animated: Bool) {
+        notificationToken?.invalidate() //Invalidate notification tokens when done observing
+    }
+    
+    
 //MARK: - IngredientAPIDelegate Method
     func ingredientAPIData(parsedData data: [String]) {
-        print("Saransh")
         let userProductIngredients = data
-        print("IngredientsAPIDelegate Method")
         print(userProductIngredients)
+        
+        realmQueue.async { [self] in
+//MARK: Realm Variables
+            //Important Class variables used for Realm
+            let realm = try! Realm()
+            
+            let realmDatabase = RealmDatabase(realm: realm, notificationToken: self.notificationToken, ingredients: userProductIngredients, queue: self.realmQueue)
+            realmDatabase.runApp()
+        }
     }
     
     override func viewDidLoad() {

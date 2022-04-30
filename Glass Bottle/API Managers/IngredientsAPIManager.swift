@@ -33,13 +33,10 @@ struct IngredientsAPIManager {
                 fatalError("Unable to get data from Ingredients API.")
             }
             
-            print("Something went wrong.")
-            
             guard let finalData = self.parseIngredientJSON(JSON: safeData)
             else {
                 fatalError("Unable to parse Ingredient API JSON Data.")
             }
-            print("FinalData = \(finalData)")
             self.delegate?.ingredientAPIData(parsedData: finalData)
             print("Used Protocol")
         })
