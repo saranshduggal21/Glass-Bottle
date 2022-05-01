@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var userProductName = " "
     var ingredientsAPIURL = " "
     var ingredientList: [String] = []
-    var notificationToken: NotificationToken? //Important Class Variable for Realm
+    var notificationToken: NotificationToken? //Important Class Variable for Realmt
     let realmQueue = DispatchQueue(label: "realm")
     
     

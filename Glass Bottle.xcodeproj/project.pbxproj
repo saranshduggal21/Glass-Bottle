@@ -18,6 +18,9 @@
 		07CF6723281785EC00617A41 /* IngredientsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF6722281785EC00617A41 /* IngredientsAPIManager.swift */; };
 		07CF67252817874100617A41 /* IngredientsAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF67242817874100617A41 /* IngredientsAPIData.swift */; };
 		07CF6727281848EA00617A41 /* BarcodeAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF6726281848EA00617A41 /* BarcodeAPIModel.swift */; };
+		07D81AB5281F1A640055A593 /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D81AB4281F1A640055A593 /* RealmDatabase.swift */; };
+		07D81AB7281F1A9F0055A593 /* RealmIngredientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D81AB6281F1A9F0055A593 /* RealmIngredientModel.swift */; };
+		4EEC655831E573D54133FE10 /* Pods_Glass_Bottle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA22D498D2986408E685068 /* Pods_Glass_Bottle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,11 @@
 		07CF6722281785EC00617A41 /* IngredientsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAPIManager.swift; sourceTree = "<group>"; };
 		07CF67242817874100617A41 /* IngredientsAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAPIData.swift; sourceTree = "<group>"; };
 		07CF6726281848EA00617A41 /* BarcodeAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeAPIModel.swift; sourceTree = "<group>"; };
+		07D81AB4281F1A640055A593 /* RealmDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
+		07D81AB6281F1A9F0055A593 /* RealmIngredientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmIngredientModel.swift; sourceTree = "<group>"; };
+		8010A01A62A1600EBD7757C5 /* Pods-Glass Bottle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glass Bottle.debug.xcconfig"; path = "Target Support Files/Pods-Glass Bottle/Pods-Glass Bottle.debug.xcconfig"; sourceTree = "<group>"; };
+		B48B304E480B3D46B0B3E303 /* Pods-Glass Bottle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glass Bottle.release.xcconfig"; path = "Target Support Files/Pods-Glass Bottle/Pods-Glass Bottle.release.xcconfig"; sourceTree = "<group>"; };
+		BDA22D498D2986408E685068 /* Pods_Glass_Bottle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glass_Bottle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EEC655831E573D54133FE10 /* Pods_Glass_Bottle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +61,8 @@
 			children = (
 				076AE9CA27CBEA57005E55EF /* Glass Bottle */,
 				076AE9C927CBEA57005E55EF /* Products */,
+				3CE120EA2B3EFF7611DA3F44 /* Pods */,
+				88237673B4A74D79669CB4A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +80,7 @@
 				076AE9CB27CBEA57005E55EF /* AppDelegate.swift */,
 				076AE9CD27CBEA57005E55EF /* SceneDelegate.swift */,
 				076AE9CF27CBEA57005E55EF /* ViewController.swift */,
+				07D81AB4281F1A640055A593 /* RealmDatabase.swift */,
 				07CF6721281785D200617A41 /* API Managers */,
 				07CF6720281785CB00617A41 /* Models */,
 				076AE9D127CBEA57005E55EF /* Main.storyboard */,
@@ -85,6 +97,7 @@
 				07CF671E2817722900617A41 /* BarcodeAPIData.swift */,
 				07CF67242817874100617A41 /* IngredientsAPIData.swift */,
 				07CF6726281848EA00617A41 /* BarcodeAPIModel.swift */,
+				07D81AB6281F1A9F0055A593 /* RealmIngredientModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,6 +111,23 @@
 			path = "API Managers";
 			sourceTree = "<group>";
 		};
+		3CE120EA2B3EFF7611DA3F44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8010A01A62A1600EBD7757C5 /* Pods-Glass Bottle.debug.xcconfig */,
+				B48B304E480B3D46B0B3E303 /* Pods-Glass Bottle.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		88237673B4A74D79669CB4A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDA22D498D2986408E685068 /* Pods_Glass_Bottle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076AE9DF27CBEA57005E55EF /* Build configuration list for PBXNativeTarget "Glass Bottle" */;
 			buildPhases = (
+				A77F9B99C8DFBED611B736A6 /* [CP] Check Pods Manifest.lock */,
 				076AE9C427CBEA57005E55EF /* Sources */,
 				076AE9C527CBEA57005E55EF /* Frameworks */,
 				076AE9C627CBEA57005E55EF /* Resources */,
+				7195C3C4882AD814A4246F92 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +196,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7195C3C4882AD814A4246F92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Glass Bottle/Pods-Glass Bottle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Glass Bottle/Pods-Glass Bottle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Glass Bottle/Pods-Glass Bottle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A77F9B99C8DFBED611B736A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Glass Bottle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		076AE9C427CBEA57005E55EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -174,6 +248,8 @@
 				07CF671D28176EDA00617A41 /* BarcodeAPIManager.swift in Sources */,
 				07CF6727281848EA00617A41 /* BarcodeAPIModel.swift in Sources */,
 				07CF67252817874100617A41 /* IngredientsAPIData.swift in Sources */,
+				07D81AB5281F1A640055A593 /* RealmDatabase.swift in Sources */,
+				07D81AB7281F1A9F0055A593 /* RealmIngredientModel.swift in Sources */,
 				07CF671F2817722900617A41 /* BarcodeAPIData.swift in Sources */,
 				076AE9CC27CBEA57005E55EF /* AppDelegate.swift in Sources */,
 				076AE9CE27CBEA57005E55EF /* SceneDelegate.swift in Sources */,
@@ -320,6 +396,7 @@
 		};
 		076AE9E027CBEA57005E55EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8010A01A62A1600EBD7757C5 /* Pods-Glass Bottle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -348,6 +425,7 @@
 		};
 		076AE9E127CBEA57005E55EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B48B304E480B3D46B0B3E303 /* Pods-Glass Bottle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
