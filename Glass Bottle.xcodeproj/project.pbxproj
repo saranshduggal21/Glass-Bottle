@@ -21,6 +21,7 @@
 		07D81AB5281F1A640055A593 /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D81AB4281F1A640055A593 /* RealmDatabase.swift */; };
 		07D81AB7281F1A9F0055A593 /* RealmIngredientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D81AB6281F1A9F0055A593 /* RealmIngredientModel.swift */; };
 		4EEC655831E573D54133FE10 /* Pods_Glass_Bottle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA22D498D2986408E685068 /* Pods_Glass_Bottle.framework */; };
+		9CB1ACE3282073F4000A6340 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1ACE2282073F4000A6340 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		07D81AB4281F1A640055A593 /* RealmDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
 		07D81AB6281F1A9F0055A593 /* RealmIngredientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmIngredientModel.swift; sourceTree = "<group>"; };
 		8010A01A62A1600EBD7757C5 /* Pods-Glass Bottle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glass Bottle.debug.xcconfig"; path = "Target Support Files/Pods-Glass Bottle/Pods-Glass Bottle.debug.xcconfig"; sourceTree = "<group>"; };
+		9CB1ACE2282073F4000A6340 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		B48B304E480B3D46B0B3E303 /* Pods-Glass Bottle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glass Bottle.release.xcconfig"; path = "Target Support Files/Pods-Glass Bottle/Pods-Glass Bottle.release.xcconfig"; sourceTree = "<group>"; };
 		BDA22D498D2986408E685068 /* Pods_Glass_Bottle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glass_Bottle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				076AE9CB27CBEA57005E55EF /* AppDelegate.swift */,
 				076AE9CD27CBEA57005E55EF /* SceneDelegate.swift */,
 				076AE9CF27CBEA57005E55EF /* ViewController.swift */,
+				9CB1ACE2282073F4000A6340 /* ViewController2.swift */,
 				07D81AB4281F1A640055A593 /* RealmDatabase.swift */,
 				07CF6721281785D200617A41 /* API Managers */,
 				07CF6720281785CB00617A41 /* Models */,
@@ -247,6 +250,7 @@
 				07CF6723281785EC00617A41 /* IngredientsAPIManager.swift in Sources */,
 				07CF671D28176EDA00617A41 /* BarcodeAPIManager.swift in Sources */,
 				07CF6727281848EA00617A41 /* BarcodeAPIModel.swift in Sources */,
+				9CB1ACE3282073F4000A6340 /* ViewController2.swift in Sources */,
 				07CF67252817874100617A41 /* IngredientsAPIData.swift in Sources */,
 				07D81AB5281F1A640055A593 /* RealmDatabase.swift in Sources */,
 				07D81AB7281F1A9F0055A593 /* RealmIngredientModel.swift in Sources */,

@@ -36,19 +36,19 @@ class RealmDatabase {
             
             DispatchQueue.main.async {
                 switch result {
-                    case .failure(let error):
-                        print("Login failed: \(error)")
-                        
-                    case .success(let user):
-                        print("Successful Anonymous Login")
-                        
-                        //FILE LOCATION OF THE REALM CONFIG (LOCAL)
-                        //  print(Realm.Configuration.defaultConfiguration.fileURL!) in case it is corrupted
-                        
-                        self.realmQueue.async {
-                            //Put the code here
-                            self.onLogin()
-                        }
+                case .failure(let error):
+                    print("Login failed: \(error)")
+                    
+                case .success(let user):
+                    print("Successful Anonymous Login")
+                    
+                    //FILE LOCATION OF THE REALM CONFIG (LOCAL)
+                    //  print(Realm.Configuration.defaultConfiguration.fileURL!) in case it is corrupted
+                    
+                    self.realmQueue.async {
+                        //Put the code here
+                        self.onLogin()
+                    }
                 }
             }
         }
@@ -67,16 +67,16 @@ class RealmDatabase {
         // Open the realm asynchronously to ensure backend data is downloaded first.
         Realm.asyncOpen { (result) in
             switch result {
-                case .failure(let error):
-                    print("Failed to open realm: \(error.localizedDescription)")
-                    
-                case .success(let realm):
-                    print("Successful Async Realm Open")
-                    
-                    self.realmQueue.async {
-                        // Realm opened
-                        self.onRealmOpened()
-                    }
+            case .failure(let error):
+                print("Failed to open realm: \(error.localizedDescription)")
+                
+            case .success(let realm):
+                print("Successful Async Realm Open")
+                
+                self.realmQueue.async {
+                    // Realm opened
+                    self.onRealmOpened()
+                }
             }
         }
     }
@@ -104,16 +104,16 @@ class RealmDatabase {
                     DispatchQueue.main.sync { [self] in
                         self.token = safeRealmReference.observe { (changes) in
                             switch changes {
-                                case .initial: break
-                                    // Results are now populated and can be accessed without blocking the UI
-                                case .update(_, let deletions, let insertions, let modifications):
-                                    // Query results have changed.
-                                    print("Deleted indices: ", deletions)
-                                    print("Inserted indices: ", insertions)
-                                    print("Modified modifications: ", modifications)
-                                case .error(let error):
-                                    // An error occurred while opening the Realm file on the background worker thread
-                                    fatalError("\(error.localizedDescription)")
+                            case .initial: break
+                                // Results are now populated and can be accessed without blocking the UI
+                            case .update(_, let deletions, let insertions, let modifications):
+                                // Query results have changed.
+                                print("Deleted indices: ", deletions)
+                                print("Inserted indices: ", insertions)
+                                print("Modified modifications: ", modifications)
+                            case .error(let error):
+                                // An error occurred while opening the Realm file on the background worker thread
+                                fatalError("\(error.localizedDescription)")
                             }
                         }
                         
@@ -124,11 +124,11 @@ class RealmDatabase {
                         //Printing the current database of ingredients
                         print("A list of all ingredients: \(realmIngredients)")
                         
-                        runProductAnalysis()
+                        
                     }
                 }
-                }
             }
+        }
         
     }
     
@@ -144,48 +144,5 @@ class RealmDatabase {
         Realm.Configuration.defaultConfiguration = user.configuration(partitionValue: partitionValue)
     }
     
-    
-    
-    
-    //MARK: Product Ingredient Analysis
-    func runProductAnalysis(){
-        var ingredientNumber = 0
-        var harmfulIngredientsNumber = 0
-        var safeIngredientsNumber = 0
-        
-        for ingredient in productIngredients {
-            ingredientNumber += 1
-            
-            //Filter by the current ingredient in the Cosmetic Product's ingredient list
-            let ingredientQueriedArray = realmIngredients.where {
-                $0.name == ingredient
-            }
-            
-            //If there aren't any ingredients by that name, we have to refer to the NLP qeury
-            if ingredientQueriedArray.isEmpty {
-                
-                //runScrapeandNLP()
-                continue
-            }
-            else {
-                let ingredientQueried = ingredientQueriedArray[0]
-                
-                //Check the isHarmful status in the Atlas collection, for now have it be binary true/false value
-                if (ingredientQueried.isHarmful == true) {
-                    harmfulIngredientsNumber += 1
-                }
-                else {
-                    safeIngredientsNumber += 1
-                }
-            }
-            
-        }
-        
-        print("Number of Ingredients: \(ingredientNumber)")
-        print("Number of Harmful Ingredients: \(harmfulIngredientsNumber)")
-        print("Number of Nonharmful Ingredients: \(safeIngredientsNumber)")
-        
-        
-    }
     
 }

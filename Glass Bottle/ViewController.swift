@@ -149,8 +149,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         DispatchQueue.main.async {
                             
                             
-                            
-                            
                         }
                     
                 }
@@ -166,6 +164,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         
+    }
+    
+    @IBAction func showResultsButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "DataSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ViewController2
+        destinationVC.productIngredients = ingredientList
+        destinationVC.productName = userProductName
     }
 }
 
