@@ -1,9 +1,7 @@
 //
 //  ViewController2.swift
 //  Glass Bottle
-//
-//  Created by D.W. on 2022-05-02.
-//
+
 
 import UIKit
 import Charts
