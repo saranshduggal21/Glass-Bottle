@@ -4,4 +4,4 @@ Glass Bottle is an app that works across all iOS devices that allows users to sc
 
 Glass Bottle was made with **Swift** as its primary language.
 
-Glass Bottle uses **Machine Learning** (**Vision** Framework + custom-trained **NLP Classification Algorithm**), Camera Operations, **Realm Sync** (for a dynamic database that updates on every user's phone), **MongoDB Atlas**, various databases & APIs, and an interactive UI in order to perform its various operations. 
+Glass Bottle uses **Machine Learning** (**Vision** Framework + custom-trained **NLP Classification Algorithm**), Camera Operations, **Realm Sync** (for a dynamic database that updates on every user's phone), a webscraper (using **SwiftSoup), ****MongoDB Atlas**, various databases & APIs, and an interactive UI in order to perform its various operations. 
