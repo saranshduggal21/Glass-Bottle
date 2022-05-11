@@ -1,6 +1,6 @@
 # Glass-Bottle
 
-Glass Bottle is an app that works across all iOS devices that allows users to scan any cosmetic or skincare product, in order break down and analyze exactly how safe or harmful that product truly is, by analyzing each and every one of its complicated ingredients.
+Glass Bottle is an app that works across all iOS devices that allows users to scan any cosmetic or skincare product, and then break down and learn exactly how safe or harmful that product truly is, by analyzing each and every one of its complicated chemical ingredients. This allows users to actually understand what they're using and applying on their body, and choose the truly safest option for themselves.
 
 Glass Bottle was made with **Swift** as its primary language.
 
