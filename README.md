@@ -14,3 +14,7 @@ Glassbottle uses **Machine Learning** (**Vision** Framework + custom-trained **N
   ingredients to exist within the database.
 * Used SwiftSoup to create a web scraping algorithm to parse loads of medical information online on each product ingredient and uses a Natural Language       Processing classification model to evaluate harm.
 * Integrated an interactive and dynamic storyboard UI using CocoaPods and Swift UI elements, with a full product breakdown and ingredient list of harmful ingredients.
+
+## Demo
+
+![Alt Text](https://media0.giphy.com/media/ciCgnNUnvbUQ0agxBG/giphy.gif?cid=790b76111908da5dc9352765dd79bd1edb536ceae91c51da&rid=giphy.gif&ct=g)
